@@ -113,6 +113,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             tvLongitud.setText(String.valueOf(loc.getLongitude()));
 
             this.mainActivity.setLocation(loc);
+           //***** QUERIA MANIPULAR LOS "loc.getLatitude y .getLongitude" para usarlos como un marcador dinamico pero no supe como *****//
 
         }
         @Override
