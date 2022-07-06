@@ -1,5 +1,6 @@
 package com.example.aplicacion;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -45,6 +46,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
 
         if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED
@@ -72,7 +74,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         mlocManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,(LocationListener) Local);
         mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,(LocationListener) Local);
-        tvLatitud.setText("Localización GPS");
+        tvLatitud.setText("Localization GPS");
         tvDireccion.setText("");
 
     }
@@ -159,7 +161,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * installed Google Play services and returned to the app.
      */
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
 
         LatLng Unach00 = new LatLng(-36.63892977884602, -71.99611065863944);
@@ -191,31 +193,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-        mMap.addMarker(new MarkerOptions().position(Unach00).title("porteria"));
+        mMap.addMarker(new MarkerOptions().position(Unach00).title("Porteria"));
         mMap.addMarker(new MarkerOptions().position(Unach01).title("Templo unach"));
-        mMap.addMarker(new MarkerOptions().position(Unach02).title("rectoria"));
-        mMap.addMarker(new MarkerOptions().position(Unach03).title("biblioteca"));
-        mMap.addMarker(new MarkerOptions().position(Unach04).title("patio de las banderas"));
+        mMap.addMarker(new MarkerOptions().position(Unach02).title("Rectoria"));
+        mMap.addMarker(new MarkerOptions().position(Unach03).title("Biblioteca"));
+        mMap.addMarker(new MarkerOptions().position(Unach04).title("Patio de las banderas"));
         mMap.addMarker(new MarkerOptions().position(Unach05).title("DTI"));
         mMap.addMarker(new MarkerOptions().position(Unach06).title("FAE"));
         mMap.addMarker(new MarkerOptions().position(Unach07).title("VDE"));
         mMap.addMarker(new MarkerOptions().position(Unach08).title("FACS"));
         mMap.addMarker(new MarkerOptions().position(Unach09).title("Recidencias damas"));
         mMap.addMarker(new MarkerOptions().position(Unach10).title("Facultad de teologia"));
-        mMap.addMarker(new MarkerOptions().position(Unach11).title("comedor institucional"));
+        mMap.addMarker(new MarkerOptions().position(Unach11).title("Comedor institucional"));
         mMap.addMarker(new MarkerOptions().position(Unach12).title("Recidencias varones"));
-        mMap.addMarker(new MarkerOptions().position(Unach13).title("instituto"));
-        mMap.addMarker(new MarkerOptions().position(Unach14).title("aulas b"));
-        mMap.addMarker(new MarkerOptions().position(Unach15).title("salon estudiantil"));
+        mMap.addMarker(new MarkerOptions().position(Unach13).title("Instituto"));
+        mMap.addMarker(new MarkerOptions().position(Unach14).title("Aulas b"));
+        mMap.addMarker(new MarkerOptions().position(Unach15).title("Salon estudiantil"));
         mMap.addMarker(new MarkerOptions().position(Unach16).title("Colegio adventista"));
-        mMap.addMarker(new MarkerOptions().position(Unach17).title("instituto de musica"));
-        mMap.addMarker(new MarkerOptions().position(Unach18).title("campo deportivo"));
-        mMap.addMarker(new MarkerOptions().position(Unach19).title("ddc/radio"));
+        mMap.addMarker(new MarkerOptions().position(Unach17).title("Instituto de musica"));
+        mMap.addMarker(new MarkerOptions().position(Unach18).title("Campo deportivo"));
+        mMap.addMarker(new MarkerOptions().position(Unach19).title("Ddc/radio"));
         mMap.addMarker(new MarkerOptions().position(Unach20).title("Gym unach"));
         mMap.addMarker(new MarkerOptions().position(Unach21).title("Gimnasio institucional"));
-        mMap.addMarker(new MarkerOptions().position(Unach22).title("recursos humanos"));
-        mMap.addMarker(new MarkerOptions().position(Unach23).title("centro de estudio"));
-        mMap.addMarker(new MarkerOptions().position(Unach24).title("direccion de vinculacion con el medio"));
+        mMap.addMarker(new MarkerOptions().position(Unach22).title("Recursos humanos"));
+        mMap.addMarker(new MarkerOptions().position(Unach23).title("Centro de estudio"));
+        mMap.addMarker(new MarkerOptions().position(Unach24).title("Direccion de vinculacion con el medio"));
         mMap.addMarker(new MarkerOptions().position(Unach25).title("FAIN"));
 
 
